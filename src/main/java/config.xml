@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://ww.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	
+	<!-- This is our bean and this is the first way to set value into our bean -->
+	
+	<bean class = "com.springcore.Student" name = "student1">
+	
+		<property name = "studentId">
+			<value>2233</value>
+		</property>
+			
+		
+		<property name = "studentName" >
+			<value>Vikash Basant</value>
+		</property>
+			
+		
+		<property name = "studentAddress">
+			<value>Bihar</value>
+		</property>
+			
+	</bean>
+	
+	<!--this is second beans and second way to insert value into our bean -->
+	<bean class = "com.springcore.Student" name = "student2">
+	
+		<property name = "studentId" value = "2324" />
+			
+		
+		<property name = "studentName" value = "Prince Lala" />
+			
+		
+		<property name = "studentAddress" value = "Delhi" />
+			
+	</bean>
+	
+	
+	<!--this is second beans and third way to insert value into our bean(Using P schema) -->
+	<bean class = "com.springcore.Student" name = "student3" p:studentId = "1111" p:studentName = "Ritu Ranjana" p:studentAddress = "Ranchi"/>
+	
+	<bean>
+		<property name = "list">
+			<list>
+				<value>12</value>
+				<value>1234</value>
+				<value>23456</value>
+				<value>12345678</value>
+				<null/>
+			</list>
+		</property>
+	</bean>
+	
+	
+</beans>
